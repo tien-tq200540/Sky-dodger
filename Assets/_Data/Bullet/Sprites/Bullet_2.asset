@@ -22,12 +22,12 @@ Sprite:
   m_AtlasName: 
   m_PackingTag: 
   m_RenderDataKey:
-    91ce12152916e0149b2705c70f74aca6: 643401656
+    56dd8adf40263824aadb041574df44bf: 263750723
   m_AtlasTags: []
   m_SpriteAtlas: {fileID: 0}
   m_RD:
     serializedVersion: 3
-    texture: {fileID: 2800000, guid: 91ce12152916e0149b2705c70f74aca6, type: 3}
+    texture: {fileID: 2800000, guid: 56dd8adf40263824aadb041574df44bf, type: 3}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -103,7 +103,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: cdccccbcec51383d00000000cdcccc3cec51383d00000000cdccccbcec5138bd00000000cdcccc3cec5138bd000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: cdccccbcec51383d00000000cdcccc3cec51383d00000000cdccccbcec5138bd00000000cdcccc3cec5138bd00000000ea743a3f00005a3ffe7e3f3f00005a3fea743a3f0000483ffe7e3f3f0000483f
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
@@ -118,7 +118,7 @@ Sprite:
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 3
-    texture: {fileID: 2800000, guid: 91ce12152916e0149b2705c70f74aca6, type: 3}
+    texture: {fileID: 2800000, guid: 56dd8adf40263824aadb041574df44bf, type: 3}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -194,7 +194,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: cdccccbcec51383d00000000cdcccc3cec51383d00000000cdccccbcec5138bd00000000cdcccc3cec5138bd000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: cdccccbcec51383d00000000cdcccc3cec51383d00000000cdccccbcec5138bd00000000cdcccc3cec5138bd00000000ea743a3f00005a3ffe7e3f3f00005a3fea743a3f0000483ffe7e3f3f0000483f
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
@@ -213,4 +213,4 @@ Sprite:
     - {x: 0.024999999, y: -0.044999998}
     - {x: 0.024999999, y: 0.044999998}
   m_Bones: []
-  m_SpriteID: 3766e0e3355cbfd4585e662f5cb252c0
+  m_SpriteID: abc88016d039f0348930b3abcadfa2e2

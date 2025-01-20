@@ -9,10 +9,10 @@ Sprite:
   m_Name: Plane_10
   m_Rect:
     serializedVersion: 2
-    x: 128
-    y: 96
-    width: 32
-    height: 32
+    x: 2
+    y: 34
+    width: 28
+    height: 28
   m_Offset: {x: 0, y: 0}
   m_Border: {x: 0, y: 0, z: 0, w: 0}
   m_PixelsToUnits: 100
@@ -22,12 +22,12 @@ Sprite:
   m_AtlasName: 
   m_PackingTag: 
   m_RenderDataKey:
-    91ce12152916e0149b2705c70f74aca6: -611595735
+    56dd8adf40263824aadb041574df44bf: -1418454542
   m_AtlasTags: []
   m_SpriteAtlas: {fileID: 0}
   m_RD:
     serializedVersion: 3
-    texture: {fileID: 2800000, guid: 91ce12152916e0149b2705c70f74aca6, type: 3}
+    texture: {fileID: 2800000, guid: 56dd8adf40263824aadb041574df44bf, type: 3}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -41,7 +41,7 @@ Sprite:
       localAABB:
         m_Center: {x: 0, y: 0, z: 0}
         m_Extent: {x: 0, y: 0, z: 0}
-    m_IndexBuffer: 030000000100020001000000
+    m_IndexBuffer: 000001000200020001000300
     m_VertexData:
       serializedVersion: 3
       m_VertexCount: 4
@@ -103,22 +103,22 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 0ad723be0ad7233e000000000ad7233e0ad723be000000000ad7233e0ad7233e000000000ad723be0ad723be000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 295c0fbe295c0f3e00000000295c0f3e295c0f3e00000000295c0fbe295c0fbe00000000295c0f3e295c0fbe000000000000000000000000000000000000000000000000000000000000000000000000
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 128
-      y: 96
-      width: 32
-      height: 32
+      x: 2
+      y: 34
+      width: 28
+      height: 28
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
     settingsRaw: 64
-    uvTransform: {x: 100, y: 144, z: 100, w: 112}
+    uvTransform: {x: 100, y: 16, z: 100, w: 48}
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 3
-    texture: {fileID: 2800000, guid: 91ce12152916e0149b2705c70f74aca6, type: 3}
+    texture: {fileID: 2800000, guid: 56dd8adf40263824aadb041574df44bf, type: 3}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -132,7 +132,7 @@ Sprite:
       localAABB:
         m_Center: {x: 0, y: 0, z: 0}
         m_Extent: {x: 0, y: 0, z: 0}
-    m_IndexBuffer: 030000000100020001000000
+    m_IndexBuffer: 000001000200020001000300
     m_VertexData:
       serializedVersion: 3
       m_VertexCount: 4
@@ -194,23 +194,28 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 0ad723be0ad7233e000000000ad7233e0ad723be000000000ad7233e0ad7233e000000000ad723be0ad723be000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 295c0fbe295c0f3e00000000295c0f3e295c0f3e00000000295c0fbe295c0fbe00000000295c0f3e295c0fbe000000000000000000000000000000000000000000000000000000000000000000000000
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 128
-      y: 96
-      width: 32
-      height: 32
+      x: 2
+      y: 34
+      width: 28
+      height: 28
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
     settingsRaw: 64
-    uvTransform: {x: 100, y: 144, z: 100, w: 112}
+    uvTransform: {x: 100, y: 16, z: 100, w: 48}
     downscaleMultiplier: 1
   m_PhysicsShape:
-  - - {x: -0.16, y: 0.16}
-    - {x: -0.16, y: -0.16}
-    - {x: 0.16, y: -0.16}
-    - {x: 0.16, y: 0.16}
+  - - {x: -0.06, y: 0.14}
+    - {x: -0.12, y: 0.089999996}
+    - {x: -0.14, y: 0.07}
+    - {x: -0.14, y: 0}
+    - {x: -0.07, y: -0.089999996}
+    - {x: 0.11, y: -0.089999996}
+    - {x: 0.14, y: -0.02}
+    - {x: 0.14, y: 0.099999994}
+    - {x: 0.06, y: 0.14}
   m_Bones: []
-  m_SpriteID: 82c9dd179bb56c543999f5eaf3580767
+  m_SpriteID: 3b5b245fc47843a49b066345c136a531
