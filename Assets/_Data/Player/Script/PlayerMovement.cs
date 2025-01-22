@@ -6,7 +6,7 @@ public class PlayerMovement : TienMonoBehaviour
 {
     public Rigidbody2D playerRigid2D;
     public float direction;
-    public float speed;
+    public float speed = 2f;
 
     protected override void LoadComponents()
     {
@@ -17,7 +17,7 @@ public class PlayerMovement : TienMonoBehaviour
     protected virtual void LoadPlayerRigidBody2D()
     {
         if (playerRigid2D != null) return;
-        playerRigid2D = GetComponent<Rigidbody2D>();
+        playerRigid2D = transform.parent.GetComponent<Rigidbody2D>();
     }
 
     private void Update()
