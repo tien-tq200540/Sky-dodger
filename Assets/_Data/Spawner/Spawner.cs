@@ -29,7 +29,11 @@ public abstract class Spawner : TienMonoBehaviour
     {
         foreach (Transform poolObj in poolObjs)
         {
-            if (poolObj.name == prefab.name) return poolObj;
+            if (poolObj.name == prefab.name)
+            {
+                poolObjs.Remove(poolObj);
+                return poolObj;
+            }
         }
 
         Transform newPrefab = Instantiate(prefab);

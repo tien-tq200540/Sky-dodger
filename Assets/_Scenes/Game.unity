@@ -601,7 +601,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6159175961b509344b92323b9ce84b34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs: []
+  prefabs:
+  - {fileID: 1462266448}
   poolObjs: []
   holder: {fileID: 564162759}
 --- !u!1 &466474608
@@ -942,6 +943,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &535536573
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 535536574}
+  - component: {fileID: 535536575}
+  m_Layer: 0
+  m_Name: Despawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &535536574
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535536573}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2018997368}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &535536575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535536573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a7254db256dfd4a9cb834b4d6b3b43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceLimit: 12
+  distance: 0
+  mainCam: {fileID: 519420032}
 --- !u!1 &564162758
 GameObject:
   m_ObjectHideFlags: 0
@@ -1342,10 +1390,10 @@ MonoBehaviour:
   - {fileID: 617487907}
   poolObjs: []
   holder: {fileID: 348630886}
-  spawnTime: 5
+  spawnTime: 1
   curTime: 0
   spawnPos: {x: 0, y: 5, z: 0}
-  enemyToSpawn: 
+  enemyToSpawn: Enemy_1
 --- !u!1 &1425606427
 GameObject:
   m_ObjectHideFlags: 0
@@ -1539,6 +1587,7 @@ Transform:
   - {fileID: 378747312}
   - {fileID: 502716492}
   - {fileID: 477335012}
+  - {fileID: 535536574}
   m_Father: {fileID: 2044013248}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2044013247
