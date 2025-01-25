@@ -202,7 +202,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa17a41072fd0ab479588e4e355b2635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosion: {fileID: 1462266448}
 --- !u!1 &20995503
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,8 +601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6159175961b509344b92323b9ce84b34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabsList:
-  - {fileID: 1462266448}
+  prefabs: []
   poolObjs: []
   holder: {fileID: 564162759}
 --- !u!1 &466474608
@@ -1339,15 +1337,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64f167f1a9d0a2842b85d71248c39ee1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabsList:
+  prefabs:
   - {fileID: 2018997368}
   - {fileID: 617487907}
   poolObjs: []
   holder: {fileID: 348630886}
-  spawnTime: 3
+  spawnTime: 5
   curTime: 0
   spawnPos: {x: 0, y: 5, z: 0}
-  enemyToSpawn: Enemy_1
+  enemyToSpawn: 
 --- !u!1 &1425606427
 GameObject:
   m_ObjectHideFlags: 0
