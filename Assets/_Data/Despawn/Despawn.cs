@@ -18,7 +18,7 @@ public abstract class Despawn : TienMonoBehaviour
     //Basic despawn
     protected virtual void DespawnObject()
     {
-        Destroy(transform.parent);
+        Destroy(transform.parent.gameObject);
     }
 
     protected abstract bool CanDespawn();
