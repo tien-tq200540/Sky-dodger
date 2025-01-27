@@ -5,6 +5,7 @@ using UnityEngine;
 public class DespawnWhenFinishAnim : Despawn
 {
     [SerializeField] protected Animator animator;
+    [SerializeField] protected string animationName;
 
     protected override void LoadComponents()
     {
@@ -22,6 +23,6 @@ public class DespawnWhenFinishAnim : Despawn
     protected override bool CanDespawn()
     {
         AnimatorStateInfo animatorStateInfo = animator.GetCurrentAnimatorStateInfo(0);
-        return animatorStateInfo.length < animatorStateInfo.normalizedTime;
+        return animatorStateInfo.IsName(animationName) && animatorStateInfo.normalizedTime >= 1f;
     }
 }

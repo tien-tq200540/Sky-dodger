@@ -1194,6 +1194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1063858300}
+  animationName: Explosion_1
 --- !u!1 &1063858297
 GameObject:
   m_ObjectHideFlags: 0
