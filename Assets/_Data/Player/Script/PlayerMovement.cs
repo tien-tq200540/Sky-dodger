@@ -1,32 +1,45 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : TienMonoBehaviour
+public class PlayerMovement : ObjectMoveToTarget
 {
-    public Rigidbody2D playerRigid2D;
     public float direction;
-    public float speed = 2f;
+    public bool canSwitchLane = true;
+    public bool isSwitchLane = false;
+    public int currentLane = 1;
 
     protected override void LoadComponents()
     {
         base.LoadComponents();
-        LoadPlayerRigidBody2D();
-    }
-
-    protected virtual void LoadPlayerRigidBody2D()
-    {
-        if (playerRigid2D != null) return;
-        playerRigid2D = transform.parent.GetComponent<Rigidbody2D>();
     }
 
     private void Update()
     {
-        direction = Input.GetAxis("Horizontal");
+        direction = InputManager.Instance.PlayerMovementInput;
+        if (canSwitchLane && direction != 0f)
+        {
+            if (!isSwitchLane)
+            {
+                isSwitchLane = true;
+                currentLane += (int)direction;
+                if (currentLane < 0) currentLane = 0;
+                else if (currentLane > 2) currentLane = 2;
+                this.target = PlayerController.Instance.PlayerMoveLanes.GetLane(currentLane).position;
+            }
+        }
     }
 
     private void FixedUpdate()
     {
-        playerRigid2D.velocity = new Vector3(direction * speed, 0f, 0f);
+        this.MoveToTarget();
+    }
+
+    protected override void MoveToTarget()
+    {
+        if (this.target == null) return;
+        if (transform.position == this.target) return;
+        Vector3 newPos = Vector3.MoveTowards(transform.position, target, speed * Time.fixedDeltaTime);
+        if (newPos == target) isSwitchLane = false;
+        PlayerController.Instance.PlayerPhysics.MoveTo(newPos);
+        Debug.Log("SwitchLane");
     }
 }

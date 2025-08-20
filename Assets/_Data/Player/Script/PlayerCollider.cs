@@ -9,8 +9,8 @@ public class PlayerCollider : TienMonoBehaviour
         if (collision.transform.parent.CompareTag("Enemy"))
         {
             Debug.Log("Destroy player!");
-            transform.parent.gameObject.SetActive(false);
-            ExplosionSpawner.Instance.SpawnExplosion(transform.parent.position);
+            //transform.parent.gameObject.SetActive(false);
+            FXSpawner.Instance.SpawnExplosion(transform.parent.position);
         }
     }
 }

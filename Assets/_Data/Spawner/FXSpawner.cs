@@ -1,12 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
-public class ExplosionSpawner : Spawner
+public class FXSpawner : Spawner
 {
-    private static ExplosionSpawner instance;
-    public static ExplosionSpawner Instance { get => instance; }
+    private static FXSpawner instance;
+    public static FXSpawner Instance { get => instance; }
 
     protected override void Awake()
     {

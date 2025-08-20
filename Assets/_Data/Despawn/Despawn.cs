@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class Despawn : TienMonoBehaviour
 {
-    private void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         this.Despawning();
     }

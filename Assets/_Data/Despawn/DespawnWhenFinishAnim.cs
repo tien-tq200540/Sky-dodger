@@ -17,7 +17,7 @@ public class DespawnWhenFinishAnim : Despawn
     {
         if (this.animator != null) return;
         this.animator = transform.parent.Find("Model").GetComponent<Animator>();
-        Debug.Log($"{transform.name}: LoadAnimator", gameObject);
+        Debug.LogWarning($"{transform.name}: LoadAnimator", gameObject);
     }
 
     protected override bool CanDespawn()

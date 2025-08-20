@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Jobs;
 
 public abstract class Spawner : TienMonoBehaviour
 {
@@ -17,7 +16,7 @@ public abstract class Spawner : TienMonoBehaviour
 
     protected virtual Transform GetPrefabByName(string prefabName)
     {
-        foreach (Transform prefab in prefabs)
+        foreach (Transform prefab in this.prefabs)
         {
             if (prefab == null) continue;
             if (prefab.name == prefabName) return prefab;
@@ -27,7 +26,7 @@ public abstract class Spawner : TienMonoBehaviour
 
     protected virtual Transform GetObjectFromPool(Transform prefab)
     {
-        foreach (Transform poolObj in poolObjs)
+        foreach (Transform poolObj in this.poolObjs)
         {
             if (poolObj.name == prefab.name)
             {
@@ -50,17 +49,26 @@ public abstract class Spawner : TienMonoBehaviour
             return null;
         }
 
+        return this.Spawn(prefab, position);
+    }
+
+    protected virtual Transform Spawn(Transform prefab, Vector3 position)
+    {
         Transform newPrefab = GetObjectFromPool(prefab);
         newPrefab.SetPositionAndRotation(position, Quaternion.identity);
         newPrefab.SetParent(holder);
         newPrefab.gameObject.SetActive(true);
-
         return newPrefab;
+    }
+
+    protected virtual void HideAllPrefabs()
+    {
+        foreach (Transform prefab in this.prefabs) prefab.gameObject.SetActive(false);
     }
 
     public virtual void Despawn(Transform obj)
     {
-        poolObjs.Add(obj);
+        this.poolObjs.Add(obj);
         obj.gameObject.SetActive(false);
     }
 
@@ -72,19 +80,14 @@ public abstract class Spawner : TienMonoBehaviour
         {
             this.prefabs.Add(child);
         }
-        Debug.Log($"{transform.name}: LoadPrefabs", gameObject);
         HideAllPrefabs();
-    }
-
-    protected virtual void HideAllPrefabs()
-    {
-        foreach (Transform prefab in prefabs) prefab.gameObject.SetActive(false);
+        Debug.LogWarning($"{transform.name}: LoadPrefabs", gameObject);
     }
 
     protected virtual void LoadHolder()
     {
         if (this.holder != null) return;
         this.holder = transform.Find("Holder");
-        Debug.Log($"{transform.name}: LoadHolder", gameObject);
+        Debug.LogWarning($"{transform.name}: LoadHolder", gameObject);
     }
 }
